@@ -1,0 +1,81 @@
+body{
+    background-color: #f8f9fa;
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-logo h1{
+    letter-spacing: 5px;
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+}
+
+.main-images{
+    margin-top: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    margin-bottom: 20vh;
+}
+
+img{
+    max-width: 100%;
+    width: 100%;
+    height: auto !important;
+}
+
+.main-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2.5vh;
+}
+
+.main-sale{
+    height: 60vh;
+    display: flex;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-bottom: 3vh;
+}
+
+.sale-left{
+    flex: 1;
+    height: 60vh;
+}
+
+.sale-right{
+    flex: 1;
+    height: 60vh;
+}
+
+.title-sale{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-sale h2{
+    padding-top: 1.5rem;
+    letter-spacing: 10px;
+}
+
+.text-sale h3{
+    letter-spacing: 5px;
+}
+
+.footer-medias{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+hr.new{
+    border-top: 1px solid black;
+}

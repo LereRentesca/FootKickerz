@@ -1,0 +1,18 @@
+@media screen and (max-width: 600px){
+    .main-images img.responsive {width: 600px;}
+
+    .main-sale{
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-bottom: 3vh;
+    }
+
+    .main-images{
+        margin-top: 5vh;
+        height: 30vh;
+        margin-bottom: 5vh;
+    }
+}

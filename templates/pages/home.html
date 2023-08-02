@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block more_css %}
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/media.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="main-images container-sm">
+    <img src="https://via.placeholder.com/900x450" alt="images"/>
+</div>
+<div class="main-buttons">
+    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+        <label class="btn btn-outline-primary" for="btnradio1">Option 1</label>
+      
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btnradio2">Option 2</label>
+      
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btnradio3">Option 3</label>
+    </div>
+</div>
+<hr class="new">
+<div class="main-sale container-sm">
+    <div class="sale-left">
+        <img src="https://via.placeholder.com/570x372" alt="sale"/>
+    </div>
+    <div class="sale-right">
+        <div class="title-sale">
+            <h2>SALE!</h2>
+        </div>
+        <div class="text-sale title-sale">
+            <h3>Get up to 50% discount!</h3>
+        </div>
+    </div>
+</div>
+<hr class="new">
+{% endblock %}
