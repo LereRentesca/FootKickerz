@@ -13,5 +13,13 @@ class Product(models.Model):
     class Meta:
         db_table = 'product'
 
-    # def __str__(self):
-    #     return self.title + " - by: " + self.user.username
+    def __str__(self):
+        return f"""
+        SKU: {self.sku}
+        Product Name: {self.product_name}
+        Availability: {self.availability}
+        Price: {self.price}
+        Description: {self.description}
+        Size: {self.size}
+        Image: {self.image}
+    """

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block more_css %}
+    <link href="{% static 'css/product_view.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>View Products</h1>
+
+        <div class="grid-container">
+            {% for item in products %}
+                <div class="grid-item">
+                    <h1>{{item.sku}}</h1>
+                    <p>{{ item.product_name }}</p>
+                    <img src="{{item.image.url}}" alt="" srcset="">
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

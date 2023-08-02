@@ -1,0 +1,19 @@
+img{
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: lightgray;
+    padding: 10px;
+}
+
+.grid-item{
+    background-color: #efefef;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+}
