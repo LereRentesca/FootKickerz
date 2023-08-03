@@ -6,15 +6,57 @@
     <link href="{% static 'css/media.css' %}" rel="stylesheet">
 {% endblock %}
 
-{% block content %}
-<body id="hero">
-    <section>
-        <h4>Trade-in-offer</h4>
+{% block main_content %}
+    <section id="hero">
+        <h4>SAVE UP TO 60%</h4>
         <h2>This season's</h2>
         <h1>Freshest finds</h1>
-        <p>Save more with coupons & up to 70% off!</p>
+        <p>Get an extra 20% off selec style with code STAYFRESHBRO</p>
         <button>Shop Now</button>
     </section>
+    <section id="sm-banner" class="section-p1">
+        <div class="banner-box">
+            <h4>Crazy deals</h4>
+            <h2>Buy 1 get 1 free</h2>
+            <span>The best classic sneakerz at sale</span>
+            <button class="white">Learn More</button>
+        </div>
+        <div class="banner-box banner-box2">
+            <h4>Crazy deals</h4>
+            <h2>Buy 1 get 1 free</h2>
+            <span>The best classic sneakerz at sale</span>
+            <button class="white">Learn More</button>
+        </div>
+    </section>
+    <section id="banner" class="section-m1">
+        <h4>Limited Time Only</h4>
+        <h2>Up to <span>70% Off</span> - All Superstar Collection</h2>
+        <button class="normal">Shop Now</button>
+    </section>
+    <section id="feature" class="section-p1 section-p2">
+        <div class="section-p2">
+            <div class="fe-box">
+                <div class="icon-larger"><i class="bi bi-truck"></i></div>
+                <div class="text">
+                    <h6>Free shipping</h6>
+                    <p>We are thrilled to announce that we now offer free shipping on all orders, making your shopping experience even more delightful.</p>
+                </div>
+            </div>
+            <div class="fe-box">
+                <div class="icon-larger"><i class="bi bi-cash"></i></div>
+                <div class="text">
+                    <h6>30 Days Money Back</h6>
+                    <p>We want you to be completely satisfied with your purchase, which is why we offer a 30-day money-back guarantee.</p>
+                </div>
+            </div>
+            <div class="fe-box">
+                <div class="icon-larger"><i class="bi bi-telephone"></i></div>
+                <div class="text">
+                    <h6>24/7 Customer Service</h6>
+                    <p> Always here for you. Immediate assistance via phone, chat, or email. Expert staff, swift solutions, and continuous improvement. Thank you for choosing us!</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="{% static 'js/script.js' %}"></script>
-</body>
 {% endblock %}
