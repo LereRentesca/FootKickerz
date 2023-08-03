@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --primary-color: #ff6b6b;
-    --secondary-color: #794afa;
-    --secondary-dark-color: #453c5c;
+    --primary-color: #eb4034;
+    --secondary-color: #4EA5D9;
+    --secondary-dark-color: #003459;
 
     --white-color: #ffffff;
     --light-bg-color: #f2f3f5;
@@ -96,22 +96,6 @@ h4 {
     font-weight: var(--fw6);
 }
 
-/*
-p {
-    font-size: 16px;
-    color: #465b52;
-    margin: 15px 0 20px 0;
-}
-
-.section-p1 {
-    padding: 40px 80px;
-}
- 
-.section-m1 {
-    margin: 40px 0;
-}
-*/
-
 .container {
     max-width: 1280px;
     margin: 0 auto;
@@ -165,6 +149,10 @@ p {
 .icon-large {
     font-size: 1.75em;
     padding: 0 0.75em 0 0;
+}
+
+.icon-larger {
+    font-size: 5em;
 }
 
 .mobile-hide {
@@ -332,7 +320,7 @@ nav .fly-item {
     top: 0;
     right: 16px;
     width: 16px;
-    background-color: var(--secondary-dark-color);
+    background-color: var(--primary-color);
     border-radius: var(--percent50);
 }
 
@@ -572,4 +560,97 @@ form.search button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+#hero h1{
+    color: white;
+}
+
+#hero h4{
+    color: white;
+}
+
+#hero h2{
+    color: white;
+}
+
+#hero p{
+    color: white;
+}
+
+#hero h4 {
+    font-size: 30px;
+}
+
+#hero h2, h1 {
+    font-size: 50px;
+    font-weight: var(--fw6);
+    text-transform: uppercase;
+}
+#hero p {
+    font-size: 16px;
+    font-weight: var(--fw5);
+    text-transform: uppercase;
+}
+
+#hero button {
+    font-size: 16px;
+    padding: 0.9em 2em;
+    height: auto;
+    width: fit-content;
+    border-radius: 2em;
+    transition: var(--trans-background-color);
+}
+
+#hero{
+    background-image: url("/static/img/home.jpg");
+    height: 90vh;
+    width: 100%;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+#feature{
+   display: flex; 
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+#feature h6 {
+    font-size: 16px;
+    font-weight: var(--fw7);
+    text-transform: uppercase;
+}
+
+#feature .fe-box{
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+}
+
+#feature .icon-larger {
+    border: 1px solid var(--dark-color);
+}
+
+#feature .fe-box i:hover {
+    color: var(--primary-color);
 }
