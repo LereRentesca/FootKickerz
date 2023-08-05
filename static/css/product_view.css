@@ -7,8 +7,9 @@ img{
 .grid-container{
     display: grid;
     grid-template-columns: auto auto auto;
-    background-color: lightgray;
+    background-color: white;
     padding: 10px;
+    grid-gap: 10px;
 }
 
 .grid-item{
