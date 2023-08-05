@@ -23,7 +23,7 @@ def product_detail(request, product_id):
     if request.method == 'GET':
         product = get_object_or_404(Product, sku=product_id)
         form = ProductViewForm(instance=product)
-        return render(request, 'products/product_view.html',{
+        return render(request, 'products/detail.html',{
             'product':product,
             'form':form
         })

@@ -6,9 +6,13 @@
 Product Detail
 {% endblock %}
 
+{% block more_css %}
+    <link href="{% static 'css/product_view.css' %}" rel="stylesheet">
+{% endblock %}
+
 {% block main_content %}
-<div class="container">
-    <h1>Product Details</h1>
+<div class="container product_add">
+    <h2>Product Details</h2>
     {{error}}
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}

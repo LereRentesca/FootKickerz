@@ -18,6 +18,10 @@ img{
     object-fit: cover;
 }
 
+.product_add{
+    margin-bottom: 20px;
+}
+
 .grid-container{
     display: grid;
     grid-template-columns: auto auto auto;
