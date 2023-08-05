@@ -1,3 +1,17 @@
+.products{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h2::first-letter{
+    text-transform: capitalize;
+    border-bottom: 2px red solid;
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
 img{
     width: 200px;
     height: auto;
@@ -8,13 +22,119 @@ img{
     display: grid;
     grid-template-columns: auto auto auto;
     background-color: white;
-    padding: 10px;
-    grid-gap: 10px;
+    grid-gap: 20px 20px;
 }
 
 .grid-item{
     background-color: #efefef;
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
     text-align: center;
+    border: 1px solid black;
+}
+
+.product_detail{
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    padding: 0px 10px 0px 5px;
+}
+
+.product_sku{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+.product_sku h1{
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.product_sku p{
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+.product_price{
+    align-self: flex-end;
+}
+
+.product_view{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.product_image_view img{
+    width: 500px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 50px;
+}
+
+.product_details_view{
+    padding-right: 200px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.product_details_view p:first-of-type{
+    color: gray;
+}
+
+.product_details_view p:nth-child(2){
+    font-weight: 300;
+    font-size: 30px;
+    border-bottom: 3px solid red;
+}
+
+.product_details_view p:nth-child(3){
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+.price_and_size p:nth-child(1){
+    font-weight: 100;
+    font-size: 20px;
+    color: red;
+    margin-top: 0px;
+    margin-right: 180px;
+}
+
+.price_and_size p:nth-child(2){
+    font-weight: 100;
+    font-size: 15px;
+    color: gray;
+    margin-top: 0px;
+    border: none;
+}
+
+.price_and_size{
+    display: flex;
+    align-items: center;
+}
+
+hr{
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 0px;
+}
+
+.buttons div:nth-child(1){
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.description p:nth-child(2){
+    margin-top: 0px;
+    border: none;
+    font-size: 15px;
 }

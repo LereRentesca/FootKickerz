@@ -18,7 +18,7 @@ def contact(request):
 
 def signup(request):
     if request.method == 'GET':
-        return render(request, 'registration/signup.html',{
+        return render(request, 'registration/signup_new.html',{
             'form':UserCreationForm
         })
     else:
@@ -30,11 +30,11 @@ def signup(request):
                 login(request, user)
                 return redirect('home')
             except IntegrityError:
-                return render(request, 'registration/signup.html',{
+                return render(request, 'registration/signup_new.html',{
                     'form':UserCreationForm,
                     'error':'Username already exists'
                 })
-        return render(request, 'registration/signup.html',{
+        return render(request, 'registration/signup_new.html',{
             'form':UserCreationForm,
             'error': 'Passwords do not match'
         })
@@ -46,7 +46,7 @@ def signout(request):
 
 def signin(request):
     if request.method == 'GET':
-        return render(request, 'registration/signin.html',{
+        return render(request, 'registration/signup_new.html',{
             'form':AuthenticationForm
         })
     else:

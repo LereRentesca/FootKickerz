@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Product View
+{% endblock %}
+
+{% block more_css %}
+    <link href="{% static 'css/product_view.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block main_content %}
+<div class="container">
+    <h2>Product View</h2>
+    <div class="product_view">
+        <div class="product_image_view">
+            <img src="{{product.image.url}}" alt="" srcset="">
+        </div>
+        <div class="product_details_view">
+            <p>{{product.brand}} / {{product.sport}}</p>
+            <p>SKU: {{product.sku}}</p>
+            <p>{{product.product_name}}</p>
+            <div class="price_and_size">
+                <p>${{product.price}}</p>
+                <p>Size: {{product.size}}</p>
+            </div>
+            <hr>
+            <div class="buttons">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      Quantity
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">1</a></li>
+                      <li><a class="dropdown-item" href="#">2</a></li>
+                      <li><a class="dropdown-item" href="#">3</a></li>
+                      <li><a class="dropdown-item" href="#">4</a></li>
+                      <li><a class="dropdown-item" href="#">5</a></li>
+                      <li><a class="dropdown-item" href="#">6</a></li>
+                    </ul>
+                </div>
+                <div class="button_cart">
+                    <button type="button" class="btn btn-danger">Add to Cart</button>
+                </div>
+            </div>
+            <hr>
+            <div class="description">
+                <p>Description: </p>
+                <p>{{product.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

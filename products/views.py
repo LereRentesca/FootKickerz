@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from .forms import ProductForm
+from .forms import ProductForm, ProductViewForm
 from .models import Product, Sport, Brand
 from django.shortcuts import get_object_or_404
 # Create your views here.
@@ -22,8 +22,8 @@ def view_product_by_brand(request):
 def product_detail(request, product_id):
     if request.method == 'GET':
         product = get_object_or_404(Product, sku=product_id)
-        form = ProductForm(instance=product)
-        return render(request, 'products/detail.html',{
+        form = ProductViewForm(instance=product)
+        return render(request, 'products/product_view.html',{
             'product':product,
             'form':form
         })
@@ -40,17 +40,36 @@ def product_detail(request, product_id):
                 'form':form,
                 'error':'Error updating product'
             })
+        
+def view_product_catalog(request, product_id):
+    if request.method == 'GET':
+        product = get_object_or_404(Product, sku=product_id)
+        return render(request, 'products/product_view.html',{
+            'product':product
+        })
+    else:
+        product = get_object_or_404(Product, sku=product_id)
+        return redirect('catalog')
 
 def catalog(request):
-    brand = request.POST.get('brand-jordan', None)
-    single_object = get_object_or_404(Brand, name=brand)
-    catalog = Product.objects.filter(brand=single_object)
-    print(catalog)
-    print(single_object.pk)
-    return render(request, 'products/catalog.html', {
-        'form':brand,
-        'products':catalog,
-    })
+    item = request.POST.get('brand-jordan',None)
+    brand_or_sport = item[0:5]
+    if brand_or_sport == 'Brand':
+        brand = item[8:]
+        single_object = get_object_or_404(Brand, name=brand)
+        catalog = Product.objects.filter(brand=single_object)
+        return render(request, 'products/catalog.html', {
+            'form':brand,
+            'products':catalog,
+        })
+    else:
+        sport = item[8:]
+        single_object = get_object_or_404(Sport, name=sport)
+        catalog = Product.objects.filter(sport=single_object)
+        return render(request, 'products/catalog.html', {
+            'form':sport,
+            'products':catalog,
+        })
 
 @login_required
 def add_product(request):

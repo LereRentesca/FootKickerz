@@ -1,20 +1,35 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}
+Product Catalog
+{% endblock %}
+
 {% block more_css %}
     <link href="{% static 'css/product_view.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block main_content %}
-<div class="container">
-    <h1>Catalog</h1>
+<div class="container products">
+    <h2>Catalog</h2>
     <div class="grid-container">
         {% for item in products %}
+        <a href="{% url 'product' item.sku %}">
             <div class="grid-item">
-                <h1>{{item.sku}}</h1>
-                <p>{{ item.product_name }}</p>
-                <img src="{{item.image.url}}" alt="" srcset="">
+                <div class="product_image">
+                    <img src="{{item.image.url}}" alt="" srcset="">
+                </div>
+                <div class="product_detail">
+                    <div class="product_sku">
+                        <h1>SKU: {{item.sku}}</h1>
+                        <p>{{ item.product_name }}</p>
+                    </div>
+                    <div class="product_price">
+                        <p>Price: ${{item.price}}</p>
+                    </div>
+                </div>
             </div>
+        </a>
         {% empty %}
             <h4>No shoes yet</h4>
         {% endfor %}
