@@ -1,9 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}
-Contact
-{% endblock %}
 
 {% block main_content %}
     <section id="contact-details" class="section-p1">
@@ -50,15 +47,15 @@ Contact
 
         <div class="people">
             <div>
-                <img src="img/people/1.png" alt="">
+                <img src="{% static 'img/1.png' %}" alt="">
                 <p><span>John Doe </span> Senior Marketing Manager <br> Phone: + 000 123 000 77 88 <br> Email: contact@example.com</p>
             </div>
             <div>
-                <img src="img/people/2.png" alt="">
+                <img src="{% static 'img/2.png' %}" alt="">
                 <p><span>William Smith</span> Senior Marketing Manager <br> Phone: + 000 123 000 77 88 <br> Email: contact@example.com</p>
             </div>
             <div>
-                <img src="img/people/3.png" alt="">
+                <img src="{% static 'img/3.png' %}" alt="">
                 <p><span>Emma Stone</span> Senior Marketing Manager <br> Phone: + 000 123 000 77 88 <br> Email: contact@example.com</p>
             </div>
         </div>
