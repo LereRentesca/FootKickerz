@@ -12,6 +12,12 @@ from django.contrib.auth.decorators import login_required
 def home(request):
     return render(request, 'pages/home.html')
 
+def cart(request):
+    return render(request, 'pages/cart.html')
+
+def cart(request):
+    return render(request, 'pages/contact.html')
+
 def signup(request):
 
     if request.method == 'GET':

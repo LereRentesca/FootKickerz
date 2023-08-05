@@ -28,6 +28,8 @@ urlpatterns = [
     path('tasks/create/', views.create_tasks, name='create'),
     path('logout/', views.signout, name='logout'),
     path('login/', views.signin, name='login'),
+    path('cart/', views.cart, name='cart'),
+    path('contact/', views.cart, name='contact'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
